@@ -7,11 +7,11 @@ const MovieItem = ({movie, onMovieSelect}) => {
     return (
     <div onClick={() => onMovieSelect(movie)} className='movie-item item'>
     <img 
-     alt= {movie.Title} 
+     alt= {movie.title} 
      className='ui image' 
-     src={movie.Poster} />
+     src={movie.poster} />
     <div className='content'>
-    <div className='header'>{movie.Title}</div> 
+    <div className='header'>{movie.title}</div> 
     </div>
     
     </div>
