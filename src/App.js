@@ -1,22 +1,28 @@
-import React from 'react';
+import React, {useState} from 'react';
 import SearchBar from './components/SearchBar';
+import MovieList from './components/MovieList';
 import useMovies from './hooks/useMovies';
-import Container from '@mui/material/Container';
+
 
 
 const App = () => {
+  const [selectedMovie, setSelectedMovie]= useState(null);
   const [movies, search] = useMovies('');
   return (
-    <div className='search-movie'>
-     <Container fixed>
-      <div className='search'>
-      <SearchBar onFormSubmit={search}
-        movies={movies}
-      />
-     </div>
-     </Container>
-    </div>
-  );
+    <div className='ui container' style={{marginTop: '20px'}}> 
+        <SearchBar onFormSubmit ={search} />
+        <div className='ui grid'>
+           <div className='ui row'>
+            
+                   <div className='five wide column'>
+        <MovieList 
+        onMovieSelect={setSelectedMovie} 
+        movies={movies}/>
+        </div>
+        </div>
+        </div>
+   </div>
+        );
 }
 
 export default App;
