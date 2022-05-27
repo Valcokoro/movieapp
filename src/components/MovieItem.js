@@ -7,11 +7,13 @@ const MovieItem = ({movie, onMovieSelect}) => {
     return (
     <div onClick={() => onMovieSelect(movie)} className='movie-item item'>
     <img 
-     alt= {movie.title} 
+     alt= 'Avengers: Endgame' 
      className='ui image' 
-     src={movie.poster} />
+     src="https://m.media-amazon.com/
+     images/M/
+     MV5BNThjZDgwZTYtMjdmYy00ZmUyLTk4NTUtMzdjZmExODQ3ZmY4XkEyXkFqcGdeQXVyMjkzMDgyNTg@._V1_SX300.jpg" />
     <div className='content'>
-    <div className='header'>{movie.title}</div> 
+    <div className='header'>"Avengers: Endgame"</div> 
     </div>
     
     </div>
